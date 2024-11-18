@@ -8,6 +8,7 @@
 from ._version import version
 __version__ = version
 
+import re
 from sys import argv, exit, stderr
 cmds = {}
 
@@ -31,6 +32,7 @@ def main():
     if len(argv) < 2:
         mainhelp()
         exit(0)
+    argv[1] = re.sub("-", "_", argv[1])
     if argv[1] not in cmds:
         print("ERROR:", argv[1], "is not a known subtool. See help below")
         mainhelp()

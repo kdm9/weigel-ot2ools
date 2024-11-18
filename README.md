@@ -8,7 +8,7 @@ There are two main ways of doing dilutions: constant-stock and variable-stock.
 
 **Variable stock** has the opposite properties: by pipetting variable amounts of both stock and diluent, we can have much greater dilution ratios (up to 200x), and we can (but don't have to) produce a constant volume of diluted DNA/RNA. However, it's slower (max 3 plates at a time), and you need to have your stock open to the world and at room temp for much longer, so can cause problems with particularly sensitive things like dirty RNA extractions.
 
-To use these tools (CLI only for now), first install with `python3 -m pip install weigel_ot2tools`. If that fails, you can do this on a linux server as it needs no GUI. If *that* fails, email me.
+To use these tools (CLI only for now), first install with `python3 -m pip install weigel-ot2tools`. If that fails, you can do this on a linux server as it needs no GUI. If *that* fails, email me.
 
 Then, use either `ot2ools variable_stock` or `ot2ools constant_stock` to generate the ot2 scripts.
 
