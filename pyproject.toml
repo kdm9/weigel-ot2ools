@@ -1,0 +1,13 @@
+[project]
+name = "weigel-ot2ools"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "tqdm",
+]
+
+[project.scripts]
+ot2ools = "ot2ools:main"
+
