@@ -5,7 +5,6 @@
 #  License, v. 2.0. If a copy of the MPL was not distributed with this
 #  file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-
 import json
 import re
 from sys import stderr, stdout, stdin, exit
@@ -40,6 +39,7 @@ def batched(iterable, n=1):
     while (batch := tuple(islice(it, n))):
         yield batch
 
-Well = namedtuple("Well", ["plate", "well", "water_vol", "stock_vol"])
-
+def enumerate_wells(iterable):
+    wells = [f"{y}{x+1}" for x in range(12) for y in "ABCDEFGH"]
+    yield from zip(wells, iterable)
 

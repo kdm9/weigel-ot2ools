@@ -18,6 +18,9 @@ cmds["variable_stock"] = variable_stock_main
 #from .const_stock import main as const_stock_main
 #cmds["constant_stock"] = const_stock_main
 
+from .pool_by_volume import main as pool_main
+cmds["pool_to_eppies"] = pool_main
+
 def mainhelp(argv=None):
     """Print this help message"""
     print("USAGE: ot2ools <subtool> [options...]\n\n")
