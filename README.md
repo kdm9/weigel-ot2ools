@@ -21,7 +21,7 @@ First, prepare a csv or tsv with at least the following columns: plate, well, st
 
 Then, run the script as follows:
 
-````
+```
 ot2tools variable_stock --protocol-script-dir protocols/ --pc Plate_name --wc Well --hc Water --sc DNA quantification.csv
 ```
 
