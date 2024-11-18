@@ -1,12 +1,19 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "weigel-ot2ools"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "tqdm",
 ]
+
+[tool.setuptools_scm]
+version_file = "ot2ools/_version.py"
 
 [project.scripts]
 ot2ools = "ot2ools:main"
