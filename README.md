@@ -7,8 +7,7 @@ There are two main ways of doing dilutions: constant-stock and variable-stock.
 
 **Constant stock** only pipettes water into plates with the opentron, after
 which we use the viaflow to transfer across a constant volume of stock DNA/RNA.
-This is faster, easier, and better if you have labile stocks like RNA you don't
-want hanging around in the opentron for hours. However, it has limited dynamic
+This is faster, easier, and better if you have labile stocks like RNA you don't want hanging around in the opentron for hours. However, it has limited dynamic
 range (i.e. can only do up to 20-fold dilutions), and produces highly varying
 amounts of diluted DNA/RNA.
 
@@ -83,6 +82,14 @@ volume, pool. Like above, these names can be changed with CLI arguments. This
 requires that you've already calculated how much volume you need from each
 sample. The labware layout is a 24-well rack of eppies, with up to 5 plates of
 source libraries and 5 boxes of tips to be pooled into up to 24 pools.
+
+**PLEASE NOTE**: your quantifications need to be reasonably accurate, and need
+to be taken **after** individual SPRI cleanup for this to be accurate. If you
+just do picogreen on the post-PCR libraries, the amount of library is often
+much less than the amount of dimer, defeating the entire purpose of this
+pooling. If need be, use a larger volume of DNA (e.g. 3uL) for quantification
+of low-concentration libraries.
+
 
 ```
 $ ot2ools pool-to-eppies --help
