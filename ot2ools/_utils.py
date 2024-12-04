@@ -28,7 +28,7 @@ def template_script(jsondat, file=None, script=None):
 
 def floatna(s):
     try:
-        return R(float(s))
+        return R(float(s), 2)
     except Exception as exc:
         return float(0)
 

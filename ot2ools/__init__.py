@@ -15,8 +15,8 @@ cmds = {}
 from .variable_stock import main as variable_stock_main
 cmds["variable_stock"] = variable_stock_main
 
-#from .const_stock import main as const_stock_main
-#cmds["constant_stock"] = const_stock_main
+from .constant_stock import main as const_stock_main
+cmds["constant_stock"] = const_stock_main
 
 from .pool_by_volume import main as pool_main
 cmds["pool_to_eppies"] = pool_main
