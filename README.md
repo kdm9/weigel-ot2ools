@@ -58,6 +58,40 @@ ot2tools constant_stock \
 ```
 
 
+Full help follows:
+
+```
+$ ot2ools constant_stock --help
+usage: ot2ools [-h] [-b BATCHSIZE] [-o PROTOCOL_SCRIPT_DIR] [-c TARGET_CONC] [-v VOLUME] [-m MIN_VOLUME] [-M MAX_VOLUME] -t SUMMARY_TABLE [--pc PLATE_COLUMN] [--wc WELL_COLUMN] [--cc CONC_COLUMN] instructions
+
+positional arguments:
+  instructions          Instructions file csv
+
+options:
+  -h, --help            show this help message and exit
+  -b BATCHSIZE, --batchsize BATCHSIZE
+                        Number of plates per batch
+  -o PROTOCOL_SCRIPT_DIR, --protocol-script-dir PROTOCOL_SCRIPT_DIR
+                        Output dir
+  -c TARGET_CONC, --target-conc TARGET_CONC
+                        Target concentration in ng/uL
+  -v VOLUME, --volume VOLUME
+                        Constant volume of source DNA to transfer (uL)
+  -m MIN_VOLUME, --min-volume MIN_VOLUME
+                        Minimum volume to transfer
+  -M MAX_VOLUME, --max-volume MAX_VOLUME
+                        Maximum volume of destination well (combination of water+stock)
+  -t SUMMARY_TABLE, --summary-table SUMMARY_TABLE
+                        Summary of actions table (tsv)
+  --pc PLATE_COLUMN, --plate-column PLATE_COLUMN
+                        Column name for plate
+  --wc WELL_COLUMN, --well-column WELL_COLUMN
+                        Column name for well
+  --cc CONC_COLUMN, --conc-column CONC_COLUMN
+                        Column name for water volume
+```
+
+
 ### `ot2ools variable_stock`
 
 First, prepare a csv or tsv with at least the following columns: plate, well,
