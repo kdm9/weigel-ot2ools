@@ -18,9 +18,16 @@ DNA/RNA. However, it's slower (max 3 plates at a time), and you need to have
 your stock open to the world and at room temp for much longer, so can cause
 problems with particularly sensitive things like dirty RNA extractions.
 
+## Installation
+
+tl;dr:
+
+    python3 -m pip install weigel-ot2tools
+
 To use these tools (CLI only for now), first install with `python3 -m pip
-install weigel-ot2tools`. If that fails, you can do this on a linux server as
-it needs no GUI. If *that* fails, email me.
+install weigel-ot2tools`. If you know what pipx is, use that. If pip install
+fails on your laptop, you can do this on a linux server as these tools need
+no GUI. If *that* fails, email me.
 
 Then, use either `ot2ools variable_stock` or `ot2ools constant_stock` to
 generate the ot2 scripts.
