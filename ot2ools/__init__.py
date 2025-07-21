@@ -15,6 +15,9 @@ cmds = {}
 from .variable_stock import main as variable_stock_main
 cmds["variable_stock"] = variable_stock_main
 
+from .dilute_with_alternate_plates_variable_stock import main as nata_variable_stock_main
+cmds["nata_variable_stock"] = nata_variable_stock_main
+
 from .constant_stock import main as const_stock_main
 cmds["constant_stock"] = const_stock_main
 
