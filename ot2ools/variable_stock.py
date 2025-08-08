@@ -30,9 +30,9 @@ def generate_protocols(wells, outdir, stock_pipette, min_volume, max_volume):
             print("SKIP empty well", well)
             continue
         if (well.stock_vol + well.water_vol) > max_volume:
-            ValueError("Overfull well {well.plate}/{well.well}")
+            raise ValueError("Overfull well {well.plate}/{well.well}")
         if well.water_vol < min_volume or well.stock_vol < min_volume:
-            ValueError("Volume too small {well.plate}/{well.well}")
+            raise ValueError("Volume too small {well.plate}/{well.well}")
         plates[well.plate][well.well] = {
             "water": well.water_vol,
             "stock": well.stock_vol,
